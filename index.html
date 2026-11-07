@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shenayaa | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== Splash screen ===== -->
+  <div id="splash">
+    <div class="splash-icons">
+      <span>&lt;/&gt;</span>
+      <span>&#9786;</span>
+      <span>&#9711;</span>
+    </div>
+    <h1>Welcome to my<br>Portfolio Website</h1>
+    <div class="splash-url mono" id="splashUrl"></div>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <nav>
+    <span class="nav-logo mono" id="navLogo"></span>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Home / Hero ===== -->
+  <section id="home" class="hero">
+    <div class="reveal">
+      <div class="hero-tag mono">&#9670; AVAILABLE FOR WORK</div>
+      <h1>Graphic Designer &<span>Frontend Developer</span></h1>
+      <div class="hero-role mono">Junior Programmer</div>
+      <p class="hero-lead">
+        Creating modern websites with a clean, responsive, and elegant look.
+        Turning ideas and designs into engaging, easy-to-use digital experiences.
+      </p>
+      <div class="chips">
+        <span class="chip">Tech Meets Craft</span>
+        <span class="chip">Transformation</span>
+        <span class="chip">Precision</span>
+      </div>
+      <div class="hero-hint">
+        &darr; explore my work below<br>
+        &nearr; open to full-time &amp; freelance opportunities
+      </div>
+    </div>
+
+    <!-- Swinging ID card with profile image box -->
+    <div class="lanyard">
+      <div class="lanyard-swing">
+        <div class="lanyard-strap">ID CARD &nbsp; ID CARD</div>
+        <div class="lanyard-clip"></div>
+        <div class="badge">
+          <div class="photo" data-photo="badge"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about">
+    <div class="reveal">
+      <div class="section-label mono">ABOUT ME</div>
+      <h2 id="aboutName"></h2>
+      <p>
+    I'm Shaina Lei Dasco, a 3rd-year Computer Science student at the City College of Calamba with a deep passion for frontend development and modern UI design. I believe that beautiful design paired with clean code creates the most memorable digital experiences.
+    </p>
+    <p>My goal is to build websites that are not only visually striking but also intuitive and accessible to everyone. Whether it's a simple landing page or a full interactive interface, I pour my heart into making sure every project feels welcoming, responsive, and uniquely yours. 
+      </p> 
+      <div class="quote">"Shaping ideas, designing the future."</div>
+      <div class="buttons">
+        <a class="btn filled" href="#">&#128196; Download CV</a>
+        <a class="btn" href="#portfolio">&nearr; View Projects</a>
+      </div>
+    </div>
+
+    <!-- Framed profile image box -->
+    <div class="profile-frame photo" data-photo="about"></div>
+
+    <div class="stats reveal">
+      <div class="stat"><b class="stat-number" id="statProjects">0</b><small class="stat-label">PROJECTS</small></div>
+      <div class="stat"><b class="stat-number" id="statWorks">0</b><small class="stat-label">COMPLETED WORKS</small></div>
+      <div class="stat"><b class="stat-number" id="statTools">0</b><small class="stat-label">TOOLS &amp; SKILLS</small></div>
+    </div>
+  </section>
+
+  <!-- ===== Decorative icon strip ===== -->
+  <div class="motifs" aria-hidden="true">
+    <span>&#9835;</span>
+    <span>&#129419;</span>
+    <span>&#9998;</span>
+    <span>&#11042;</span>
+    <span>&#9883;</span>
+    <span>&#9728;</span>
+  </div>
+
+  <!-- ===== Portfolio ===== -->
+  <section id="portfolio">
+    <h2>Portfolio Showcase</h2>
+    <p class="portfolio-intro">Explore my journey through projects and technical expertise.</p>
+
+    <div class="tabs">
+      <button class="active" data-tab="projects">Projects</button>
+      <button data-tab="stack">Tech Stack</button>
+    </div>
+
+    <div class="card-grid" id="cardGrid"></div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="contact-intro">Drop me a message or leave a comment, let's connect.</p>
+
+    <div class="contact-columns">
+      <!-- Message form (opens the visitor's email app) -->
+      <div class="panel">
+        <h2>Get in Touch</h2>
+        <p class="panel-subtitle">Feel free to reach out if you want to collaborate, discuss ideas, or simply say hello.</p>
+        <input id="contactName" placeholder="Your Name">
+        <input id="contactEmail" type="email" placeholder="Your Email">
+        <textarea id="contactMessage" placeholder="Your Message"></textarea>
+        <button class="btn filled" id="sendButton">Send Message</button>
+      </div>
+
+      <!-- Comment box (comments only last until the page is refreshed) -->
+      <div class="panel">
+        <h2>Comments</h2>
+        <p class="panel-subtitle">Leave your thoughts here</p>
+        <input id="commentName" placeholder="Your Name">
+        <textarea id="commentText" placeholder="Your Comment"></textarea>
+        <button class="btn filled" id="postButton">Post Comment</button>
+        <div id="commentList"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mono" id="footer"></footer>
+
+  <!-- ===== Project popup ===== -->
+  <div id="modal">
+    <div class="modal-box">
+      <a href="#" id="modalBack" class="modal-back mono">&larr; Back</a>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
