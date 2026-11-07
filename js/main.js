@@ -1,5 +1,5 @@
 /* =========================================================
-   Page logic. Content comes from content.js (loaded first).
+  Page logic. Content comes from content.js (loaded first).
    ========================================================= */
 
 /* ---------- 1. Helpers ---------- */
@@ -98,8 +98,8 @@ function projectPopupHtml(project) {
 
   const video = project.video
     ? `<video class="modal-video" controls preload="metadata" poster="${project.video.poster}">
-         <source src="${project.video.src}" type="video/mp4">
-       </video>`
+        <source src="${project.video.src}" type="video/mp4">
+        </video>`
     : "";
 
   const gallery = project.images.length
